@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Cards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pokémon Card Display</h1>
+    <div class="input-area">
+      <label for="num-pokemon">Number of Pokémon: </label>
+      <input type="number" id="num-pokemon" min="1" max="151" value="5">
+
+      <label for="pokemon-type">Category (Type): </label>
+      <select id="pokemon-type">
+        <option value="normal">Normal</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+        <option value="electric">Electric</option>
+        <!-- Add more Pokémon types here -->
+      </select>
+      <button id="fetch-pokemon">Get Pokémon</button>
+    </div>
+
+    <div id="pokemon-cards" class="cards">
+      <!-- Pokémon cards will be rendered here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

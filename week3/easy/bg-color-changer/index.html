@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>BackGround Color Changer</title>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      height: 100vh;
+    }
+
+    .buttonBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0e0e0;
+      border-radius: 20px;
+      padding: 10px;
+      position: absolute;
+      bottom: 20px;
+      width: 900px;
+    }
+
+    button {
+      height: 40px;
+      color: white;
+      border-radius: 15px;
+      width: 100px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    /* Specific button colors */
+    .red {
+      background-color: red;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .yellow {
+      background-color: yellow;
+      color: black;
+    }
+
+    .purple {
+      background-color: purple;
+    }
+
+    .white {
+      background-color: white;
+      color: black;
+    }
+
+    .custom {
+      background-color: #8a2be2;
+      color: black;
+    }
+
+    .default {
+      color: black;
+    }
+
+    /* Example custom color */
+  </style>
+</head>
+
+<body>
+  <div class="buttonBar">
+    <button onclick="changeColor('red')" class="red">Red</button>
+    <button onclick="changeColor('blue')" class="blue">Blue</button>
+    <button onclick="changeColor('green')" class="green">Green</button>
+    <button onclick="changeColor('black')" class="black">Black</button>
+    <button onclick="changeColor('yellow')" class="yellow">Yellow</button>
+    <button onclick="changeColor('purple')" class="purple">Purple</button>
+    <button onclick="changeColor('white')" class="default">Default</button>
+    <button onclick="customColor()" class="custom">Custom Color</button>
+  </div>
+  <script>
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+    function customColor() {
+      let newColor = prompt("Color: ");
+      document.body.style.backgroundColor = newColor;
+    }
+  </script>
+</body>
+
+</html>
